@@ -23,6 +23,8 @@ export default function Navigation() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
+  if (pathname === '/join') return null
+
   return (
     <motion.nav
       initial={{ y: -60, opacity: 0 }}
@@ -64,7 +66,7 @@ export default function Navigation() {
             href="/lazy-girl-os"
             className="ml-2 px-5 py-2 bg-blush text-white text-sm font-medium rounded-full hover:bg-[#e8899a] active:scale-[0.97] transition-all duration-150 shadow-[0_4px_16px_rgba(242,167,179,0.35)]"
           >
-            join the OS ✦
+            The OS Waitlist ✦
           </Link>
         </div>
 
@@ -126,7 +128,7 @@ export default function Navigation() {
                 onClick={() => setMenuOpen(false)}
                 className="mt-1 px-5 py-3 bg-blush text-white text-sm font-medium rounded-full text-center shadow-soft"
               >
-                join the OS ✦
+                The OS Waitlist ✦
               </Link>
             </div>
           </motion.div>

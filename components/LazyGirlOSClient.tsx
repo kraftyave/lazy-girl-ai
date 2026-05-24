@@ -651,21 +651,21 @@ export default function LazyGirlOSClient() {
               <motion.div initial={{ opacity: 0, x: -16 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5, delay: 0.1 }}
                 className="inline-flex items-center gap-2 bg-blush/10 border border-blush/20 rounded-full px-4 py-1.5 mb-6">
                 <div className="w-1.5 h-1.5 rounded-full bg-blush animate-pulse" />
-                <span className="font-sans text-[10px] uppercase tracking-[0.2em] text-blush font-medium">coming soon — join the waitlist</span>
+                <span className="font-sans text-[10px] uppercase tracking-[0.2em] text-blush font-medium">coming soon · join the waitlist</span>
               </motion.div>
 
               <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl text-charcoal leading-[1.02] mb-4">LazyGirlOS</h1>
-              <p className="font-script text-2xl md:text-3xl text-blush mb-6">romanticize your life, automate the admin ♡</p>
+              <p className="font-script text-2xl md:text-3xl text-blush mb-6">Romanticize Your Life, Automate the Admin ♡</p>
               <p className="font-sans text-taupe text-base leading-relaxed mb-3 max-w-lg">
                 A cinematic AI life operating system. Your ambient AI companion, curated automations, emotional support, and a dashboard that looks like your digital bedroom.
               </p>
-              <p className="font-sans text-sm text-taupe/70 italic mb-10">no API key. no setup. just open it and feel better.</p>
+              <p className="font-sans text-sm text-taupe/70 italic mb-10">No API key. No setup. Just open it and feel better.</p>
 
               <div className="max-w-md"><WaitlistForm /></div>
             </motion.div>
 
             <motion.div initial={{ opacity: 0, scale: 0.94 }} animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.9, delay: 0.2, ease: [0.23, 1, 0.32, 1] }} className="hidden lg:block pt-12">
+              transition={{ duration: 0.9, delay: 0.2, ease: [0.23, 1, 0.32, 1] }} className="block mt-10 lg:mt-0 pt-0 lg:pt-12">
               <DashboardMockup />
             </motion.div>
           </div>
@@ -677,16 +677,16 @@ export default function LazyGirlOSClient() {
         <div className="max-w-4xl mx-auto text-center">
           <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: '-60px' }}
             transition={{ duration: 0.6, ease: [0.23, 1, 0.32, 1] }}>
-            <p className="font-sans text-[10px] uppercase tracking-[0.22em] text-blush font-medium mb-4">the vibe</p>
+            <p className="font-sans text-[10px] uppercase tracking-[0.22em] text-blush font-medium mb-4">The Vibe</p>
             <h2 className="font-serif text-4xl md:text-5xl text-charcoal mb-4 leading-[1.05]">
               Clueless x Her x Tumblr<br />
-              <span className="font-script text-blush">x iPhone widgets x 2000s internet ♡</span>
+              <span className="font-script text-blush">x iPhone Widgets x 2000s Internet ♡</span>
             </h2>
             <p className="font-sans text-taupe text-base leading-relaxed max-w-2xl mx-auto mb-4">
               Not a productivity app. Not a boring SaaS dashboard. LazyGirlOS is a customizable digital sanctuary that makes your life feel like a main character moment.
             </p>
             <p className="font-sans text-sm text-taupe/70 italic max-w-lg mx-auto">
-              a luxury concierge, a rich-girl command center, and an emotionally intelligent AI best friend. all in one OS.
+              A luxury concierge, a rich-girl command center, and an emotionally intelligent AI best friend. All in one OS.
             </p>
           </motion.div>
         </div>
@@ -697,8 +697,8 @@ export default function LazyGirlOSClient() {
         <div className="max-w-5xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
             className="text-center mb-10">
-            <p className="font-sans text-[10px] uppercase tracking-[0.22em] text-blush font-medium mb-2">what she sounds like</p>
-            <h2 className="font-serif text-3xl text-charcoal">not a robot. your bestie.</h2>
+            <p className="font-sans text-[10px] uppercase tracking-[0.22em] text-blush font-medium mb-2">What She Sounds Like</p>
+            <h2 className="font-serif text-3xl text-charcoal">Not a Robot. Your Bestie.</h2>
           </motion.div>
 
           <div className="grid lg:grid-cols-2 gap-10 items-center">
@@ -708,13 +708,13 @@ export default function LazyGirlOSClient() {
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 16 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }} className="flex flex-col gap-3">
-              <p className="font-sans text-[10px] uppercase tracking-[0.22em] text-taupe font-medium">her personality adapts to your era</p>
+              <p className="font-sans text-[10px] uppercase tracking-[0.22em] text-taupe font-medium">Her Personality Adapts to Your Era</p>
               {[
-                { era: 'Soft Girl Era',  tone: 'warm, slow, emotionally gentle — she meets you where you are' },
-                { era: 'CEO Girl',       tone: 'sharp, focused, no fluff — straight to what matters' },
-                { era: 'Chaos Fairy',    tone: 'playful, chaotic-good — she laughs with you, then fixes it' },
-                { era: 'Main Character', tone: 'cinematic, emotionally intelligent — every day feels like a scene' },
-                { era: 'Wellness Reset', tone: 'calm, grounded, nurturing — for when you need to breathe first' },
+                { era: 'Soft Girl Era',  tone: 'Warm, slow, emotionally gentle. She meets you where you are.' },
+                { era: 'CEO Girl',       tone: 'Sharp, focused, no fluff. Straight to what matters.' },
+                { era: 'Chaos Fairy',    tone: 'Playful, chaotic-good. She laughs with you, then fixes it.' },
+                { era: 'Main Character', tone: 'Cinematic, emotionally intelligent. Every day feels like a scene.' },
+                { era: 'Wellness Reset', tone: 'Calm, grounded, nurturing. For when you need to breathe first.' },
               ].map((p, i) => (
                 <motion.div key={p.era} initial={{ opacity: 0, x: 12 }} whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.07 }}
@@ -733,8 +733,8 @@ export default function LazyGirlOSClient() {
         <div className="max-w-5xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
             transition={{ duration: 0.6 }} className="text-center mb-12">
-            <p className="font-sans text-[10px] uppercase tracking-[0.22em] text-blush font-medium mb-3">what it does</p>
-            <h2 className="font-serif text-4xl text-charcoal">four pillars. your whole life.</h2>
+            <p className="font-sans text-[10px] uppercase tracking-[0.22em] text-blush font-medium mb-3">What It Does</p>
+            <h2 className="font-serif text-4xl text-charcoal">Four Pillars. Your Whole Life.</h2>
           </motion.div>
 
           <div className="grid sm:grid-cols-2 gap-5">
@@ -822,8 +822,8 @@ export default function LazyGirlOSClient() {
         <div className="max-w-5xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
             className="text-center mb-12">
-            <p className="font-sans text-[10px] uppercase tracking-[0.22em] text-blush font-medium mb-3">12 themes</p>
-            <h2 className="font-serif text-4xl text-charcoal mb-4">decorate your digital life.</h2>
+            <p className="font-sans text-[10px] uppercase tracking-[0.22em] text-blush font-medium mb-3">12 Themes</p>
+            <h2 className="font-serif text-4xl text-charcoal mb-4">Decorate Your Digital Life.</h2>
             <p className="font-sans text-sm text-taupe max-w-sm mx-auto leading-relaxed">
               Each theme changes colors, typography, animations, assistant tone, and the emotional feel of the entire OS.
             </p>
@@ -844,7 +844,7 @@ export default function LazyGirlOSClient() {
               </div>
               <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
                 className="font-sans text-xs text-taupe/60 text-center mt-4 italic">
-                switch themes anytime. the OS follows your mood.
+                Switch themes anytime. The OS follows your mood.
               </motion.p>
             </motion.div>
 
@@ -863,13 +863,13 @@ export default function LazyGirlOSClient() {
           <div className="grid md:grid-cols-2 gap-10 items-center">
             <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
               transition={{ duration: 0.6 }}>
-              <p className="font-sans text-[10px] uppercase tracking-[0.22em] text-blush font-medium mb-3">your AI bestie</p>
+              <p className="font-sans text-[10px] uppercase tracking-[0.22em] text-blush font-medium mb-3">Your AI Bestie</p>
               <h2 className="font-serif text-4xl text-charcoal mb-4 leading-snug">
-                name her. customize her.<br />
-                <span className="font-script text-blush">she&apos;s yours ♡</span>
+                Name Her. Customize Her.<br />
+                <span className="font-script text-blush">She&apos;s Yours ♡</span>
               </h2>
               <p className="font-sans text-sm text-taupe leading-relaxed mb-6 max-w-sm">
-                Choose her name — Luna, Nova, Ivy, Coco, Venus, Elle. Pick her personality. She remembers your routines, your goals, and how you were feeling last Tuesday.
+                Choose her name: Luna, Nova, Ivy, Coco, Venus, Elle. Pick her personality. She remembers your routines, your goals, and how you were feeling last Tuesday.
               </p>
               <div className="flex flex-col gap-2.5">
                 {[
@@ -904,8 +904,8 @@ export default function LazyGirlOSClient() {
         <div className="max-w-4xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
             className="text-center mb-10">
-            <p className="font-sans text-[10px] uppercase tracking-[0.22em] text-blush font-medium mb-3">two modes</p>
-            <h2 className="font-serif text-4xl text-charcoal">start simple. go deeper when you&apos;re ready.</h2>
+            <p className="font-sans text-[10px] uppercase tracking-[0.22em] text-blush font-medium mb-3">Two Modes</p>
+            <h2 className="font-serif text-4xl text-charcoal">Start Simple. Go Deeper When You&apos;re Ready.</h2>
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-4">
@@ -916,12 +916,12 @@ export default function LazyGirlOSClient() {
                 <div className="w-2 h-2 rounded-full bg-blush" />
                 <span className="font-sans text-[10px] uppercase tracking-[0.2em] text-blush font-medium">Easy Mode</span>
               </div>
-              <h3 className="font-serif text-2xl text-charcoal mb-3">instant magic ♡</h3>
+              <h3 className="font-serif text-2xl text-charcoal mb-3">Instant Magic ♡</h3>
               <p className="font-sans text-sm text-taupe leading-relaxed mb-5">
                 LazyGirlOS works the moment you sign up. No API key. No terminal. No technical knowledge. Just open it and feel better.
               </p>
               <ul className="flex flex-col gap-2">
-                {['morning briefs, daily', 'AI companion with memory', 'curated automations', 'all 12 themes', 'works immediately'].map(f => (
+                {['Morning Briefs, Daily', 'AI Companion with Memory', 'Curated Automations', 'All 12 Themes', 'Works Immediately'].map(f => (
                   <li key={f} className="flex items-center gap-2">
                     <span className="text-blush text-xs flex-shrink-0">✦</span>
                     <span className="font-sans text-xs text-charcoal/80">{f}</span>
@@ -940,12 +940,12 @@ export default function LazyGirlOSClient() {
                 <div className="w-2 h-2 rounded-full bg-charcoal/50" />
                 <span className="font-sans text-[10px] uppercase tracking-[0.2em] text-charcoal/60 font-medium">Advanced Mode ✨</span>
               </div>
-              <h3 className="font-serif text-2xl text-charcoal mb-3">go deeper.</h3>
+              <h3 className="font-serif text-2xl text-charcoal mb-3">Go Deeper.</h3>
               <p className="font-sans text-sm text-taupe leading-relaxed mb-5">
                 For founders, creators, and power users who want to unlock the full stack. Connect your own AI providers, run browser automations, build long-term memory across your life.
               </p>
               <ul className="flex flex-col gap-2 mb-5">
-                {['unlimited usage', 'Claude, OpenAI, Gemini — your choice', 'browser automations', 'long-term memory engine', 'advanced workflows'].map(f => (
+                {['Unlimited Usage', 'Claude, OpenAI, Gemini — Your Choice', 'Browser Automations', 'Long-Term Memory Engine', 'Advanced Workflows'].map(f => (
                   <li key={f} className="flex items-center gap-2">
                     <span className="text-charcoal/40 text-xs flex-shrink-0">✦</span>
                     <span className="font-sans text-xs text-charcoal/70">{f}</span>
@@ -953,7 +953,7 @@ export default function LazyGirlOSClient() {
                 ))}
               </ul>
               <p className="font-sans text-[10px] text-taupe/50 italic leading-relaxed border-t border-charcoal/8 pt-4">
-                &ldquo;this mode gives your assistant deeper system access.&rdquo;
+                &ldquo;This mode gives your assistant deeper system access.&rdquo;
               </p>
             </motion.div>
           </div>
@@ -965,7 +965,7 @@ export default function LazyGirlOSClient() {
         <div className="max-w-3xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
             className="text-center mb-10">
-            <h2 className="font-serif text-4xl text-charcoal">built for girls who…</h2>
+            <h2 className="font-serif text-4xl text-charcoal">Built for Girls Who…</h2>
           </motion.div>
           <div className="grid sm:grid-cols-2 gap-3">
             {[
@@ -998,9 +998,9 @@ export default function LazyGirlOSClient() {
         <div className="max-w-xl mx-auto relative">
           <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
             transition={{ duration: 0.6 }}>
-            <p className="font-sans text-[10px] uppercase tracking-[0.22em] text-blush font-medium mb-4">your era starts here</p>
+            <p className="font-sans text-[10px] uppercase tracking-[0.22em] text-blush font-medium mb-4">Your Era Starts Here</p>
             <h2 className="font-serif text-4xl md:text-5xl text-charcoal mb-3 leading-[1.05]">
-              romanticize your life.<br />automate the admin.
+              Romanticize Your Life.<br />Automate the Admin.
             </h2>
             <p className="font-script text-2xl text-blush mb-8">you just show up ♡</p>
             <WaitlistForm />
@@ -1010,11 +1010,13 @@ export default function LazyGirlOSClient() {
 
       {/* Footer note */}
       <section className="py-8 px-6 text-center border-t border-blush-light/20">
-        <p className="font-sans text-xs text-taupe/60 mb-3">while you wait — try the free tools and shop the systems</p>
+        <p className="font-sans text-xs text-taupe/60 mb-3">while you wait — get the free newsletter from Elaine or try the free tools</p>
         <div className="flex gap-3 justify-center">
-          <Link href="/tools" className="font-sans text-xs text-blush hover:underline">free tools →</Link>
+          <Link href="/join" className="font-sans text-xs text-blush hover:underline">newsletter →</Link>
           <span className="text-taupe/30">·</span>
-          <Link href="/shop" className="font-sans text-xs text-taupe hover:text-charcoal transition-colors">shop systems</Link>
+          <Link href="/tools" className="font-sans text-xs text-taupe hover:text-charcoal transition-colors">free tools</Link>
+          <span className="text-taupe/30">·</span>
+          <Link href="/shop" className="font-sans text-xs text-taupe hover:text-charcoal transition-colors">shop</Link>
         </div>
       </section>
     </main>

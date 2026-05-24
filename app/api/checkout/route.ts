@@ -17,7 +17,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Payment service not configured' }, { status: 500 })
   }
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://lazygirlai.vercel.app'
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? ''
 
   const res = await fetch(`${DODO_BASE}/checkouts`, {
     method: 'POST',

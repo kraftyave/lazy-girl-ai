@@ -40,7 +40,7 @@ export default function Hero() {
             >
               <span className="w-8 h-px bg-blush" />
               <span className="font-sans text-[10px] uppercase tracking-[0.22em] text-taupe font-medium">
-                start free. go deeper when you&apos;re ready. ✦
+                because you&apos;ve got better things to do ✦
               </span>
             </motion.div>
 
@@ -71,7 +71,7 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.4, ease: [0.23, 1, 0.32, 1] }}
               className="font-sans text-[11px] uppercase tracking-[0.22em] font-medium text-taupe"
             >
-              prompts. systems. guides. actually for your life.
+              Prompts. Systems. Guides. Actually for Your Life.
             </motion.p>
 
             {/* Body copy */}
@@ -81,7 +81,7 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.5, ease: [0.23, 1, 0.32, 1] }}
               className="font-sans text-taupe text-[15px] leading-relaxed max-w-[320px]"
             >
-              never touched AI before? start here — it&apos;s easier than you think. already using it and want your life to just run? we built the systems. pick your vibe and go.
+              Never touched AI before? Start here. It&apos;s easier than you think. Already using it and want your life to just run? We built the systems. Pick your vibe and go.
             </motion.p>
 
             {/* Buttons */}
@@ -95,13 +95,13 @@ export default function Hero() {
                 href="/tools"
                 className="px-7 py-3.5 bg-blush text-white font-sans font-medium text-sm rounded-full hover:bg-[#e8899a] active:scale-[0.97] transition-all duration-150 shadow-[0_6px_24px_rgba(242,167,179,0.4)]"
               >
-                try the free tools ✦
+                Try the Free Tools ✦
               </Link>
               <Link
                 href="/shop"
                 className="px-7 py-3.5 bg-white/70 text-charcoal font-sans font-medium text-sm rounded-full border border-blush-light/50 hover:bg-white active:scale-[0.97] transition-all duration-150"
               >
-                shop systems
+                Shop Systems
               </Link>
             </motion.div>
 
@@ -122,7 +122,7 @@ export default function Hero() {
                 ))}
               </div>
               <p className="font-sans text-[11px] text-taupe">
-                <span className="font-semibold text-charcoal">12k+ lazy girls</span> already running on autopilot
+                <span className="font-semibold text-charcoal">12k+ Lazy Girls</span> Already Running on Autopilot
               </p>
             </motion.div>
           </motion.div>

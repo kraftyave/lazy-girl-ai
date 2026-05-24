@@ -28,27 +28,27 @@ export default function CTASection() {
         <FadeIn>
           <span className="inline-flex items-center gap-2 font-sans text-[10px] uppercase tracking-[0.22em] text-blush font-medium mb-6">
             <span className="w-8 h-px bg-blush/40" />
-            what&apos;s next ✦
+            What&apos;s Next ✦
             <span className="w-8 h-px bg-blush/40" />
           </span>
         </FadeIn>
 
         <FadeIn delay={0.1}>
           <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-charcoal leading-tight mb-4">
-            your life OS.
+            Your Life OS.
           </h2>
         </FadeIn>
 
         <FadeIn delay={0.15}>
           <p className="font-script text-3xl md:text-4xl text-blush mb-6 leading-snug">
-            for girls with too many tabs open ♡
+            For Girls With Too Many Tabs Open ♡
           </p>
         </FadeIn>
 
         <FadeIn delay={0.2}>
           <p className="font-sans text-taupe text-sm leading-relaxed max-w-sm mx-auto mb-10">
-            plan your week. track your money. stop overthinking.
-            one dashboard, one OS — all of it handled.
+            Plan your week. Track your money. Stop overthinking.
+            One dashboard. One OS. All of it handled.
           </p>
         </FadeIn>
 
@@ -58,13 +58,13 @@ export default function CTASection() {
               href="/lazy-girl-os"
               className="inline-flex items-center justify-center px-8 py-4 bg-blush text-white font-sans font-medium text-sm rounded-full hover:bg-[#e8899a] active:scale-[0.97] transition-all duration-150 shadow-[0_8px_30px_rgba(242,167,179,0.4)]"
             >
-              join the waitlist ✦
+              Join the Waitlist ✦
             </Link>
             <Link
               href="/shop"
               className="inline-flex items-center justify-center px-8 py-4 bg-white/60 text-charcoal font-sans font-medium text-sm rounded-full border border-blush-light/50 hover:bg-white/90 active:scale-[0.97] transition-all duration-150 backdrop-blur-sm"
             >
-              shop what&apos;s ready now
+              Shop What&apos;s Ready Now
             </Link>
           </div>
         </FadeIn>
@@ -72,7 +72,7 @@ export default function CTASection() {
         {/* Feature pills */}
         <FadeIn delay={0.4}>
           <div className="flex flex-wrap justify-center gap-2 mt-10">
-            {['plan your week ✦', 'money clarity', 'daily dashboard', 'stop overthinking', 'built for lazy girls ♡'].map((tag) => (
+            {['Plan Your Week ✦', 'Money Clarity', 'Daily Dashboard', 'Stop Overthinking', 'Built for Lazy Girls ♡'].map((tag) => (
               <motion.span
                 key={tag}
                 whileHover={{ scale: 1.04, transition: { duration: 0.15 } }}
