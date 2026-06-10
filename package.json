@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "vercel-build": "next build",
+    "vercel-build": "next build && NODE_OPTIONS='--require @next/env/config' npx tsx scripts/seed-posts.ts",
     "seed:vercel": "vercel env pull .env.vercel.local --environment=production --yes && tsx --env-file=.env.vercel.local scripts/seed-posts.ts",
     "start": "next start",
     "lint": "next lint",

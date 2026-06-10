@@ -5,18 +5,20 @@
  * Requires DATABASE_URL and PAYLOAD_SECRET in .env.local
  */
 import { configDotenv } from 'dotenv'
-configDotenv({ path: '.env.local' })
+// Prefer injected env (Vercel build / vercel env run). Only load .env.local for local dev.
+if (!process.env.DATABASE_URL) {
+  configDotenv({ path: '.env.local' })
+}
+if (!process.env.DATABASE_URL) {
+  console.error('DATABASE_URL is missing. Add it to .env.local or run via `vercel env run -e production`')
+  process.exit(1)
+}
 import { getPayload } from 'payload'
 import config from '../payload.config'
 import { blogPosts } from './seed-data/blog-data'
 import { blocksToLexical, categoryToPayload } from '../lib/blog-lexical'
 
 async function seed() {
-  if (!process.env.DATABASE_URL) {
-    console.error('DATABASE_URL is missing. Add it to .env.local')
-    process.exit(1)
-  }
-
   const payload = await getPayload({ config })
 
   console.log(`Seeding ${blogPosts.length} posts into Payload CMS...`)
