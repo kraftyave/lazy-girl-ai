@@ -5,7 +5,7 @@
 import { blogPostsBatch2 } from './blog-posts-batch2'
 import type { BlogPost } from '../../lib/blog-types'
 
-export type { Block, BlogPost } from './blog-types'
+export type { Block, BlogPost } from '../../lib/blog-types'
 
 export const blogPosts: BlogPost[] = [
   {
