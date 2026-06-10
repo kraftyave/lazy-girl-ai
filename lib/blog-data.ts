@@ -1,26 +1,11 @@
+/**
+ * SEED DATA ONLY — do not import this file in app/runtime code.
+ * Blog content is served from Payload CMS. Run `npm run seed` to sync.
+ */
 import { blogPostsBatch2 } from './blog-posts-batch2'
+import type { BlogPost } from './blog-types'
 
-export type Block =
-  | { type: 'p'; text: string }
-  | { type: 'h2'; text: string }
-  | { type: 'h3'; text: string }
-  | { type: 'ul'; items: string[] }
-  | { type: 'tip'; text: string }
-  | { type: 'callout'; text: string }
-
-export type BlogPost = {
-  slug: string
-  title: string
-  excerpt: string
-  category: string
-  tags: string[]
-  readingTime: number
-  publishedAt: string
-  coverGradient: string
-  coverImage: string
-  featured?: boolean
-  content: Block[]
-}
+export type { Block, BlogPost } from './blog-types'
 
 export const blogPosts: BlogPost[] = [
   {
@@ -709,19 +694,3 @@ export const blogPosts: BlogPost[] = [
 
   ...blogPostsBatch2,
 ]
-
-export function getPostBySlug(slug: string): BlogPost | null {
-  return blogPosts.find((p) => p.slug === slug) ?? null
-}
-
-export function getPostsWithoutContent() {
-  return blogPosts.map(({ content: _, ...post }) => post)
-}
-
-export function getFeaturedPost(): BlogPost | null {
-  return blogPosts.find((p) => p.featured) ?? blogPosts[0] ?? null
-}
-
-export function getNonFeaturedPosts() {
-  return blogPosts.filter((p) => !p.featured)
-}
