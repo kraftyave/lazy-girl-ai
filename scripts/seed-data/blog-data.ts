@@ -1,9 +1,9 @@
 /**
- * SEED DATA ONLY — do not import this file in app/runtime code.
- * Blog content is served from Payload CMS. Run `npm run seed` to sync.
+ * SEED DATA ONLY — scripts/seed-data/, not loaded by the site at runtime.
+ * Blog content is served from Payload CMS. Run `npm run seed` or deploy to sync.
  */
 import { blogPostsBatch2 } from './blog-posts-batch2'
-import type { BlogPost } from './blog-types'
+import type { BlogPost } from '../../lib/blog-types'
 
 export type { Block, BlogPost } from './blog-types'
 

@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { Pool } from 'pg'
 import { getPayload } from 'payload'
 import config from '@payload-config'
-import { blogPosts } from '@/lib/blog-data'
+import { blogPosts } from '@/scripts/seed-data/blog-data'
 import { blocksToLexical, categoryToPayload } from '@/lib/blog-lexical'
 
 export const maxDuration = 60

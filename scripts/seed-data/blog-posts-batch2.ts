@@ -1,4 +1,4 @@
-import type { BlogPost } from './blog-types'
+import type { BlogPost } from '../../lib/blog-types'
 
 export const blogPostsBatch2: BlogPost[] = [
   {

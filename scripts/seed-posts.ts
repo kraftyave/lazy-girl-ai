@@ -8,7 +8,7 @@ import { configDotenv } from 'dotenv'
 configDotenv({ path: '.env.local' })
 import { getPayload } from 'payload'
 import config from '../payload.config'
-import { blogPosts } from '../lib/blog-data'
+import { blogPosts } from './seed-data/blog-data'
 import { blocksToLexical, categoryToPayload } from '../lib/blog-lexical'
 
 async function seed() {
@@ -47,6 +47,10 @@ async function seed() {
     }
 
     if (existing.docs.length > 0) {
+      if (process.env.SEED_FORCE_UPDATE !== 'true') {
+        console.log(`  skip (exists): ${post.slug}`)
+        continue
+      }
       await payload.update({
         collection: 'posts',
         id: existing.docs[0].id,
