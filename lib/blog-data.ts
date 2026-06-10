@@ -1,3 +1,5 @@
+import { blogPostsBatch2 } from './blog-posts-batch2'
+
 export type Block =
   | { type: 'p'; text: string }
   | { type: 'h2'; text: string }
@@ -31,7 +33,6 @@ export const blogPosts: BlogPost[] = [
     publishedAt: '2026-05-15',
     coverGradient: 'from-blush-light/60 to-[#FFD7D1]/40',
     coverImage: '/images/blog/ai-apps-i-actually-use.png',
-    featured: true,
     content: [
       { type: 'p', text: 'There are hundreds of AI tools that launched in the last year alone. I am not going to pretend I tried all of them. But I tried a lot. Here is what actually stayed.' },
 
@@ -705,6 +706,8 @@ export const blogPosts: BlogPost[] = [
       { type: 'tip', text: 'A brand voice GPT gets better when you treat it like a junior writer: give examples, give constraints, give feedback, and never publish its first draft untouched.' },
     ],
   },
+
+  ...blogPostsBatch2,
 ]
 
 export function getPostBySlug(slug: string): BlogPost | null {
