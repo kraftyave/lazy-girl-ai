@@ -2,6 +2,7 @@ import { Playfair_Display, Poppins, Dancing_Script } from 'next/font/google'
 import '../globals.css'
 import Navigation from '@/components/Navigation'
 import DodoInit from '@/components/DodoInit'
+import { Analytics } from '@vercel/analytics/next'
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -29,6 +30,7 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
         <Navigation />
         {children}
         <DodoInit />
+        <Analytics />
       </body>
     </html>
   )
