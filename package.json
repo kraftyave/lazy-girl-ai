@@ -8,7 +8,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "vercel-build": "next build && tsx scripts/seed-posts.ts",
+    "vercel-build": "next build",
+    "seed:vercel": "vercel env pull .env.vercel.local --environment=production --yes && tsx --env-file=.env.vercel.local scripts/seed-posts.ts",
     "start": "next start",
     "lint": "next lint",
     "test": "vitest run",
