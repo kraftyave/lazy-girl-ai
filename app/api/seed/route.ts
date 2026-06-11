@@ -3,7 +3,7 @@ import { Pool } from 'pg'
 import { getPayload } from 'payload'
 import config from '@payload-config'
 import { blogPosts } from '@/scripts/seed-data/blog-data'
-import { blocksToLexical, categoryToPayload } from '@/lib/blog-lexical'
+import { postToPayloadData } from '@/lib/seed-post-data'
 
 export const maxDuration = 60
 
@@ -221,39 +221,26 @@ export async function GET(req: NextRequest) {
         collection: 'posts',
         where: { slug: { equals: post.slug } },
         limit: 1,
+        draft: true,
       })
 
-      const data = {
-        title: post.title,
-        slug: post.slug,
-        excerpt: post.excerpt,
-        category: categoryToPayload(post.category),
-        tags: post.tags.map((tag) => ({ tag })),
-        readingTime: post.readingTime,
-        publishedAt: post.publishedAt,
-        featured: post.featured ?? false,
-        coverImageUrl: post.coverImage,
-        status: 'published' as const,
-        content: blocksToLexical(post.content),
-        meta: {
-          title: `${post.title} — lazy girl ai`,
-          description: post.excerpt,
-        },
-      }
+      const data = postToPayloadData(post)
 
       if (existing.docs.length > 0) {
         await payload.update({
           collection: 'posts',
           id: existing.docs[0].id,
           data,
+          draft: false,
         })
-        steps.push(`updated: ${post.slug}`)
+        steps.push(`published: ${post.slug}`)
         continue
       }
 
       await payload.create({
         collection: 'posts',
         data,
+        draft: false,
       })
       steps.push(`seeded: ${post.slug}`)
     }

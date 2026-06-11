@@ -16,7 +16,7 @@ if (!process.env.DATABASE_URL) {
 import { getPayload } from 'payload'
 import config from '../payload.config'
 import { blogPosts } from './seed-data/blog-data'
-import { blocksToLexical, categoryToPayload } from '../lib/blog-lexical'
+import { postToPayloadData } from '../lib/seed-post-data'
 
 async function seed() {
   const payload = await getPayload({ config })
@@ -28,25 +28,10 @@ async function seed() {
       collection: 'posts',
       where: { slug: { equals: post.slug } },
       limit: 1,
+      draft: true,
     })
 
-    const data = {
-      title: post.title,
-      slug: post.slug,
-      excerpt: post.excerpt,
-      category: categoryToPayload(post.category),
-      tags: post.tags.map((tag) => ({ tag })),
-      readingTime: post.readingTime,
-      publishedAt: post.publishedAt,
-      featured: post.featured ?? false,
-      coverImageUrl: post.coverImage,
-      status: 'published' as const,
-      content: blocksToLexical(post.content),
-      meta: {
-        title: `${post.title} — lazy girl ai`,
-        description: post.excerpt,
-      },
-    }
+    const data = postToPayloadData(post)
 
     if (existing.docs.length > 0) {
       if (process.env.SEED_FORCE_UPDATE !== 'true') {
@@ -57,6 +42,7 @@ async function seed() {
         collection: 'posts',
         id: existing.docs[0].id,
         data,
+        draft: false,
       })
       console.log(`  updated: ${post.slug}`)
       continue
@@ -65,6 +51,7 @@ async function seed() {
     await payload.create({
       collection: 'posts',
       data,
+      draft: false,
     })
 
     console.log(`  seeded: ${post.slug}`)

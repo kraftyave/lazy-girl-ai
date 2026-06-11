@@ -38,8 +38,20 @@ export async function getPublishedPosts(): Promise<PayloadPost[]> {
       sort: '-publishedAt',
       limit: 100,
       depth: 2,
+      draft: false,
     })
-    return result.docs as PayloadPost[]
+    if (result.docs.length > 0) {
+      return result.docs as PayloadPost[]
+    }
+    // Fallback: legacy posts may have status=published but _status=draft until republished
+    const legacy = await payload.find({
+      collection: 'posts',
+      where: { status: { equals: 'published' } },
+      sort: '-publishedAt',
+      limit: 100,
+      depth: 2,
+    })
+    return legacy.docs as PayloadPost[]
   } catch {
     return []
   }
@@ -48,16 +60,26 @@ export async function getPublishedPosts(): Promise<PayloadPost[]> {
 export async function getPostBySlug(slug: string): Promise<PayloadPost | null> {
   const payload = await getPayloadClient()
   if (!payload) return null
+  const where = {
+    and: [{ slug: { equals: slug } }, { status: { equals: 'published' } }],
+  }
   try {
-    const result = await payload.find({
+    const published = await payload.find({
       collection: 'posts',
-      where: {
-        and: [{ slug: { equals: slug } }, { status: { equals: 'published' } }],
-      },
+      where,
+      limit: 1,
+      depth: 2,
+      draft: false,
+    })
+    if (published.docs[0]) return published.docs[0] as PayloadPost
+
+    const legacy = await payload.find({
+      collection: 'posts',
+      where,
       limit: 1,
       depth: 2,
     })
-    return (result.docs[0] as PayloadPost) ?? null
+    return (legacy.docs[0] as PayloadPost) ?? null
   } catch {
     return null
   }
